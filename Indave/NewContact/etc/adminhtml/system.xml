@@ -1,0 +1,5 @@
+<field id="indave_newcontact_answer" translate="label comment" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+    <label>Label Of Your Field</label>
+    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+    <!-- This model return all transactional email template list of magento -->
+</field>

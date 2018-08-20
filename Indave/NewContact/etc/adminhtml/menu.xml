@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Indave_NewContact::contact" title="Contact" module="Indave_NewContact" sortOrder="51" resource="Indave_NewContact::contact"/>
+        <add id="Indave_NewContact::all" title="Manage Requests" module="Indave_NewContact" sortOrder="10" action="indave_newcontact/requests" resource="Indave_NewContact::requests" parent="Indave_NewContact::contact"/>
+    </menu>
+</config>
