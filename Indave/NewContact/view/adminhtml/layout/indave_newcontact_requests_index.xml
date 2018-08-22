@@ -29,7 +29,7 @@
                     <block class="Magento\Backend\Block\Widget\Grid\ColumnSet" name="contact_requests_grid.grid.columnSet" as="grid.columnSet">
                         <arguments>
                             <argument name="rowUrl" xsi:type="array">
-                                <item name="path" xsi:type="string">*/*/edit</item>
+                                <item name="path" xsi:type="string">*/*/view</item>
                                 <item name="extraParamsTemplate" xsi:type="array">
                                     <item name="id" xsi:type="string">getId</item>
                                 </item>

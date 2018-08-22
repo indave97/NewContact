@@ -1,0 +1,66 @@
+<?php
+
+$item = $block->getCollection();
+$data = $item->getData();
+
+$edit_url = $block->getEditUrl();
+$back_url = $block->getBackUrl();
+$delete_url = $block->getDeleteUrl();
+
+?>
+<style>
+    table {  font-family: arial, sans-serif;  border-collapse: collapse;  width: 100%;  margin-top: 30px;}
+    td, th {  border: 1px solid #dddddd;  text-align: left;  padding: 8px;  }
+    tr:nth-child(even) { background-color: #dddddd; }
+    .post-id{width:2%} .post-name{width:30%}
+</style>
+
+<div class="page-main-actions">
+    <div class="page-actions-placeholder"></div>
+    <div class="page-actions" data-ui-id="page-actions-toolbar-content-header">
+        <div class="page-actions-inner" data-title="Simple Request">
+            <div class="page-actions-buttons">
+                <button id="back" title="Back" type="button" class="action-default scalable back" onclick="setLocation('<?= $back_url; ?>')" data-ui-id="indave-newcontact-requests-edit-back-button">
+                    <span>Back</span>
+                </button>
+                <button id="delete" title="Delete Request" type="button" class="action-default scalable delete" onclick="deleteConfirm('Are you sure you want to do this?', '<?= $delete_url; ?>')" data-ui-id="indave-newcontact-requests-edit-delete-button">
+                    <span>Delete Request</span>
+                </button>
+                <button id="save" title="Edit Request" type="button" class="action-default scalable save primary ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" data-ui-id="indave-newcontact-requests-edit-save-button" role="button" aria-disabled="false" onclick="setLocation('<?= $edit_url; ?>')">
+                    <span class="ui-button-text">
+                        <span>Edit Request</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <td><?= $data['id']; ?></td>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <td><?= $data['name']; ?></td>
+    </tr>
+    <tr>
+        <th>E-mail</th>
+        <td><?= $data['email']; ?></td>
+    </tr>
+    <tr>
+        <th>Text</th>
+        <td><?= $data['text']; ?></td>
+    </tr>
+    <tr>
+        <th>Answer</th>
+        <td><?= $data['answer']; ?></td>
+    </tr>
+    <tr>
+        <th>Status</th>
+        <td><?= ($data['status'] == 1) ? 'Yes' : 'No'; ?></td>
+    </tr>
+</table>
+
